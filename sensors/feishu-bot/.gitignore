@@ -1,0 +1,7 @@
+# 忽略运行缓存和依赖
+__pycache__/
+*.py[cod]
+node_modules/
+.venv/
+venv/
+.env

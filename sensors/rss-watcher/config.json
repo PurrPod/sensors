@@ -1,0 +1,13 @@
+{
+  "name": "rss-watcher",
+  "description": "RSS 订阅观察器，按固定间隔轮询多个 RSS 源，发现新更新时推送摘要到主进程。",
+  "enabled": false,
+  "env": {
+    "INTERVAL": "1800",
+    "RSS_SUBSCRIPTIONS_JSON": "[{\"name\": \"Ahead of AI\", \"rss_url\": \"https://magazine.sebastianraschka.com/feed\"},{\"name\": \"Latepost 晚点\", \"rss_url\": \"https://rsshub.rssforever.com/latepost\"}]"
+  },
+  "capabilities": {
+    "observe": true,
+    "express": false
+  }
+}

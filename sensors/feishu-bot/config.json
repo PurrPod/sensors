@@ -1,0 +1,14 @@
+{
+  "name": "feishu-bot",
+  "description": "飞书机器人传感器，通过 WebSocket 长连接监听飞书群消息并支持主动下发卡片消息。",
+  "enabled": true,
+  "env": {
+    "FEISHU_APP_ID": "",
+    "FEISHU_APP_SECRET": "",
+    "FEISHU_CHAT_ID": ""
+  },
+  "capabilities": {
+    "observe": true,
+    "express": true
+  }
+}

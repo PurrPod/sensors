@@ -1,0 +1,10 @@
+# 忽略运行缓存和依赖
+__pycache__/
+*.py[cod]
+node_modules/
+.venv/
+venv/
+.env
+
+# RSS 轮询缓存
+rss_history.json
