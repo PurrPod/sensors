@@ -1,0 +1,13 @@
+{
+  "name": "wechat-clawbot",
+  "description": "微信 iLink Bot 双向通道传感器，长轮询监听微信消息并支持将回复（文本/图片）发回微信。",
+  "enabled": true,
+  "env": {
+    "WECHAT_BOT_TOKEN": ""
+  },
+  "tool_detail": false,
+  "capabilities": {
+    "observe": true,
+    "express": true
+  }
+}

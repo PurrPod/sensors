@@ -7,6 +7,7 @@
     "FEISHU_APP_SECRET": "",
     "FEISHU_CHAT_ID": ""
   },
+  "tool_detail": false,
   "capabilities": {
     "observe": true,
     "express": true

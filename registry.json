@@ -11,6 +11,7 @@
         "FEISHU_APP_SECRET": "",
         "FEISHU_CHAT_ID": ""
       },
+      "tool_detail": false,
       "capabilities": {
         "observe": true,
         "express": true
@@ -24,6 +25,7 @@
         "INTERVAL": "1800",
         "RSS_SUBSCRIPTIONS_JSON": "[{\"name\": \"Ahead of AI\", \"rss_url\": \"https://magazine.sebastianraschka.com/feed\"},{\"name\": \"Latepost 晚点\", \"rss_url\": \"https://rsshub.rssforever.com/latepost\"}]"
       },
+      "tool_detail": false,
       "capabilities": {
         "observe": true,
         "express": false
@@ -36,9 +38,23 @@
       "env": {
         "CRON_FILE": "~/.purrcat/core/cron.json"
       },
+      "tool_detail": false,
       "capabilities": {
         "observe": true,
         "express": false
+      }
+    },
+    {
+      "name": "wechat-clawbot",
+      "description": "微信 iLink Bot 双向通道传感器，长轮询监听微信消息并支持将回复（文本/图片）发回微信。",
+      "enabled": true,
+      "env": {
+        "WECHAT_BOT_TOKEN": ""
+      },
+      "tool_detail": false,
+      "capabilities": {
+        "observe": true,
+        "express": true
       }
     }
   ]

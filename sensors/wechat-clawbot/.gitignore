@@ -1,0 +1,10 @@
+# 忽略运行缓存和依赖
+__pycache__/
+*.py[cod]
+node_modules/
+.venv/
+venv/
+.env
+
+# 微信登录态与消息游标缓存
+wechat_state.json

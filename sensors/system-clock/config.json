@@ -5,6 +5,7 @@
   "env": {
     "CRON_FILE": "~/.purrcat/core/cron.json"
   },
+  "tool_detail": false,
   "capabilities": {
     "observe": true,
     "express": false

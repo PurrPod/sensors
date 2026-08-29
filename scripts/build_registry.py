@@ -17,7 +17,7 @@ REPO_URL = "https://github.com/PurrPod/sensors"
 
 SENSORS_DIR = "sensors"
 
-REQUIRED_FIELDS = ("name", "description", "enabled", "env", "capabilities")
+REQUIRED_FIELDS = ("name", "description", "enabled", "env", "tool_detail", "capabilities")
 
 
 def fail(msg):
@@ -61,7 +61,11 @@ def validate_entry(folder, entry, expected_name):
     if not isinstance(entry.get("env"), dict):
         fail(f"[{folder}/config.json] 'env' 必须是一个对象")
 
-    # 校验 5: capabilities 必须是对象且包含 observe/express
+    # 校验 5: tool_detail 必须是布尔
+    if not isinstance(entry.get("tool_detail"), bool):
+        fail(f"[{folder}/config.json] 'tool_detail' 必须是布尔值 (true/false)")
+
+    # 校验 6: capabilities 必须是对象且包含 observe/express
     caps = entry.get("capabilities")
     if not isinstance(caps, dict):
         fail(f"[{folder}/config.json] 'capabilities' 必须是一个对象")
@@ -69,7 +73,7 @@ def validate_entry(folder, entry, expected_name):
         if cap not in caps or not isinstance(caps[cap], bool):
             fail(f"[{folder}/config.json] 'capabilities.{cap}' 必须是布尔值")
 
-    # 校验 6: 同名 .py 代码文件必须存在
+    # 校验 7: 同名 .py 代码文件必须存在
     code_file = os.path.join(folder, f"{expected_name}.py")
     if not os.path.isfile(code_file):
         fail(f"[{folder}] 缺失 sensor 代码文件: {expected_name}.py")
@@ -82,6 +86,7 @@ def normalize(entry):
         "description": entry["description"],
         "enabled": entry["enabled"],
         "env": entry["env"],
+        "tool_detail": entry["tool_detail"],
         "capabilities": entry["capabilities"],
     }
 

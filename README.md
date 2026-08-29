@@ -27,7 +27,7 @@ sensors/
 └── sensors/             # 官方 sensor (源码直接在本仓库维护)
     └── <sensor-name>/   # 每个 sensor 一个独立文件夹
         ├── <sensor-name>.py # sensor 的单个代码文件 (与文件夹同名)
-        └── config.json      # sensor 配置 (name / description / enabled / env / capabilities)
+        └── config.json      # sensor 配置 (name / description / enabled / env / tool_detail / capabilities)
 ```
 
 ---
@@ -42,6 +42,7 @@ sensors/
 | `feishu-bot` | 飞书机器人传感器，通过 WebSocket 长连接监听飞书群消息并支持主动下发卡片消息。 | ✅ 启用 | observe, express |
 | `rss-watcher` | RSS 订阅观察器，按固定间隔轮询多个 RSS 源，发现新更新时推送摘要到主进程。 | ⏸️ 停用 | observe |
 | `system-clock` | 系统时钟传感器，定时轮询本地 cron 配置并按规则触发闹钟提醒或启动任务图。 | ✅ 启用 | observe |
+| `wechat-clawbot` | 微信 iLink Bot 双向通道传感器，长轮询监听微信消息并支持将回复（文本/图片）发回微信。 | ✅ 启用 | observe, express |
 <!-- SENSORS:END -->
 
 ---
@@ -60,6 +61,7 @@ sensors/
     "FEISHU_APP_SECRET": "xxx",
     "FEISHU_CHAT_ID": "oc_xxx"
   },
+  "tool_detail": false,
   "capabilities": {
     "observe": true,
     "express": true
@@ -73,6 +75,7 @@ sensors/
 * **`description`** (必填): 一句话描述该 Sensor 的用途。
 * **`enabled`** (必填): 是否启用该 Sensor。
 * **`env`** (必填): 环境变量键值对，注入到 Sensor 运行时。
+* **`tool_detail`** (必填): 是否在消息中携带工具调用明细，默认为 `false`。
 * **`capabilities`** (必填): 能力声明，包含 `observe` (布尔) 与 `express` (布尔) 两个子字段。
 
 ### 命名一致性要求

@@ -45,3 +45,4 @@ Thumbs.db
 
 # Sensor runtime caches
 rss_history.json
+wechat_state.json

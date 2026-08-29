@@ -6,6 +6,7 @@
     "INTERVAL": "1800",
     "RSS_SUBSCRIPTIONS_JSON": "[{\"name\": \"Ahead of AI\", \"rss_url\": \"https://magazine.sebastianraschka.com/feed\"},{\"name\": \"Latepost 晚点\", \"rss_url\": \"https://rsshub.rssforever.com/latepost\"}]"
   },
+  "tool_detail": false,
   "capabilities": {
     "observe": true,
     "express": false
