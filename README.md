@@ -37,12 +37,12 @@ sensors/
 *(注：本列表由自动化流水线实时生成)*
 
 <!-- SENSORS:START -->
-| 传感器名 (Install ID) | 描述 | 状态 | 能力 |
-| :--- | :--- | :--- | :--- |
-| `feishu-bot` | 飞书机器人传感器，通过 WebSocket 长连接监听飞书群消息并支持主动下发卡片消息。 | ⏸️ 停用 | observe, express |
-| `rss-watcher` | RSS 订阅观察器，按固定间隔轮询多个 RSS 源，发现新更新时推送摘要到主进程。 | ⏸️ 停用 | observe |
-| `system-clock` | 系统时钟传感器，定时轮询本地 cron 配置并按规则触发闹钟提醒或启动任务图。 | ⏸️ 停用 | observe |
-| `wechat-clawbot` | 微信 iLink Bot 双向通道传感器，长轮询监听微信消息并支持将回复（文本/图片）发回微信。 | ⏸️ 停用 | observe, express |
+| 传感器名 (Install ID) | 描述 | 能力 |
+| :--- | :--- | :--- |
+| `feishu-bot` | 飞书机器人传感器，通过 WebSocket 长连接监听飞书群消息并支持主动下发卡片消息。 | observe, express |
+| `rss-watcher` | RSS 订阅观察器，按固定间隔轮询多个 RSS 源，发现新更新时推送摘要到主进程。 | observe |
+| `system-clock` | 系统时钟传感器，定时轮询本地 cron 配置并按规则触发闹钟提醒或启动任务图。 | observe |
+| `wechat-clawbot` | 微信 iLink Bot 双向通道传感器，长轮询监听微信消息并支持将回复（文本/图片）发回微信。 | observe, express |
 <!-- SENSORS:END -->
 
 ---

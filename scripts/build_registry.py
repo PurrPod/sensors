@@ -117,22 +117,21 @@ def scan_sensors():
 def generate_markdown_table(entries):
     """生成 Markdown 格式表格"""
     lines = [
-        "| 传感器名 (Install ID) | 描述 | 状态 | 能力 |",
-        "| :--- | :--- | :--- | :--- |",
+        "| 传感器名 (Install ID) | 描述 | 能力 |",
+        "| :--- | :--- | :--- |",
     ]
 
     if not entries:
-        lines.append("| *(虚位以待)* | 期待您的收录！ | - | - |")
+        lines.append("| *(虚位以待)* | 期待您的收录！ | - |")
         return "\n".join(lines) + "\n"
 
     for short_id, info in sorted(entries):
         name = info["name"]
         desc = str(info["description"]).replace("|", "\\|")
-        status = "✅ 启用" if info.get("enabled") else "⏸️ 停用"
         caps = info.get("capabilities", {})
         cap_list = [k for k in ("observe", "express") if caps.get(k)]
         cap_text = ", ".join(cap_list) if cap_list else "-"
-        lines.append(f"| `{name}` | {desc} | {status} | {cap_text} |")
+        lines.append(f"| `{name}` | {desc} | {cap_text} |")
 
     return "\n".join(lines) + "\n"
 
