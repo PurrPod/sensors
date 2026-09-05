@@ -5,7 +5,7 @@
     {
       "name": "feishu-bot",
       "description": "飞书机器人传感器，通过 WebSocket 长连接监听飞书群消息并支持主动下发卡片消息。",
-      "enabled": true,
+      "enabled": false,
       "env": {
         "FEISHU_APP_ID": "",
         "FEISHU_APP_SECRET": "",
@@ -34,7 +34,7 @@
     {
       "name": "system-clock",
       "description": "系统时钟传感器，定时轮询本地 cron 配置并按规则触发闹钟提醒或启动任务图。",
-      "enabled": true,
+      "enabled": false,
       "env": {
         "CRON_FILE": "~/.purrcat/core/cron.json"
       },
@@ -47,7 +47,7 @@
     {
       "name": "wechat-clawbot",
       "description": "微信 iLink Bot 双向通道传感器，长轮询监听微信消息并支持将回复（文本/图片）发回微信。",
-      "enabled": true,
+      "enabled": false,
       "env": {
         "WECHAT_BOT_TOKEN": ""
       },

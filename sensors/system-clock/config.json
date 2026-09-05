@@ -1,7 +1,7 @@
 {
   "name": "system-clock",
   "description": "系统时钟传感器，定时轮询本地 cron 配置并按规则触发闹钟提醒或启动任务图。",
-  "enabled": true,
+  "enabled": false,
   "env": {
     "CRON_FILE": "~/.purrcat/core/cron.json"
   },
